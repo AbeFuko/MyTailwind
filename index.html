@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Tailwind CSS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <!----------------------
+        文字の配置、色の指定
+    ---------------------->
+    <p class="mt-2">文字の配置、色の指定</p>
+    <div class="bg-pink-100">
+        <!-- 公式カラーチャート：https://tailwindcss.com/docs/customizing-colors -->
+        <h1 class="text-center text-4xl font-bold text-red-500 opacity-50">Hello</h1>
+    </div>
+
+    <!----------------------
+        背景色、サイズの指定
+    ---------------------->
+    <p class="mt-8">背景色、サイズの指定</p>
+    <div class="bg-sky-100">
+        <!-- []を使用して値を直接指定することが可能。また、パーセンテージは分数で表現可能。　例）w-40 = w-[160px]、 w-[75%] = w-3/4-->
+        <div class="bg-red-400 w-[160px] m-4">Box1</div>
+        <div class="bg-sky-400 w-40 h-40 mb-4">Box2</div>
+        <div class="bg-orange-400 w-3/4 mx-auto">Box3</div>
+        <!-- Tailwind CSSではbox-sizingプロパティのデフォルトがborder-boxとなる。なのでpaddingを追加しても、widthは追加する前と変わらない。 -->
+        <div class="bg-green-400 w-[75%] pl-4">Box4</div>
+    </div>
+
+    <!----------------------
+        境界線の指定
+    ---------------------->
+    <p class="mt-8">境界線の指定</p>
+    <div class="bg-yellow-100">
+        <div class="bg-red-400 w-20 h-20 border-solid border-gray-200 border-8">BoxA</div>
+        <div class="bg-sky-400 w-20 h-20 border-dashed border-gray-200 border-b-8">BoxB</div>
+    </div>
+
+    <!----------------------
+        ボタンのスタイリング
+    ---------------------->
+    <p class="mt-8">ボタンのスタイリング</p>
+    <div class="bg-green-100">
+        <button class="bg-orange-400 text-white m-4 py-2 px-4 rounded-full shadow-black/30
+            shadow-md hover:opacity-80 transition duration-500 active:translate-y-1">Buy now!</button>
+    </div>
+
+    <!----------------------
+        フレックスボックス、ビューポートの設定
+    ---------------------->
+    <p class="mt-8">フレックスボックス、ビューポートの設定</p>
+    <div class="bg-purple-200 sm:bg-purple-300 lg:bg-purple-400">
+        <header class="bg-gray-200">
+            Header
+            <nav class="sm:hidden">SP Menu</nav>
+            <nav class="hidden sm:block">PC Menu</nav>
+        </header>
+        <div class="sm:flex sm:gap-4">
+            <!-- flex-1はautoと同じ役割がある。他の要素があった場合、余白をどの割合で分割するか指定できる。 -->
+            <main class="bg-gray-300 sm:flex-1">
+                Main
+            </main>
+            <aside class="bg-gray-400 sm:w-40">
+                Aside
+            </aside>
+        </div>
+        <footer class="bg-gray-500">
+            Footer
+        </footer>
+    </div>
+
+</body>
+</html>
